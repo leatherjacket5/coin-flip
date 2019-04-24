@@ -11,17 +11,27 @@
     <h1>Coin Toss</h1>
     <p class="results">
         <span id="wins">Wins: 0</span>
-        <span id="loses">Loses: 0</span>
+        <span id="losses">Loses: 0</span>
     </p>
     <p>
-        <img src="./assets/heads-image.png" alt="Coin head">
+        <img id="coin-image" src="./assets/heads-image.png" alt="Coin head">
+    </p>
+    <p id="message">
+        Place a bet and flip the coin!
     </p>
     <p>
-        place a bet and flip the coin!
+        <label>
+            <input id="heads-choice" type="radio" name="coin-side" checked> Heads
+        </label>
     </p>
     <p>
-        <button>Flip</button>
+        <label>
+            <input type="radio" name="coin-side"> Tails
+        </label>
     </p>
-    
+    <p>
+        <button id="flip-button">Flip</button>
+    </p>
+    <script type="module" src="./src/index.js"></script>    
 </body>
 </html>
