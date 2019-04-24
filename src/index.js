@@ -12,7 +12,6 @@ const messageDisplay = document.getElementById('message');
 
 const moneyMessage = document.getElementById('money-message');
 const moneyBet = document.getElementById('money-bet');
-const betButton = document.getElementById('bet-button');
 
 
 let wins = 0;
@@ -49,11 +48,7 @@ flipButton.addEventListener('click', () => {
 
     }
     
-
+    
   
 });
 
-betButton.addEventListener('click', () => {
-    console.log(moneyBet.value);
-
-});
