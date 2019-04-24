@@ -9,6 +9,9 @@ const messageDisplay = document.getElementById('message');
 
 flipButton.addEventListener('click', () => {
     
+const randomNumber = Math.random();
+const flip = getHeadsOrTails(randomNumber);
 
+console.log(flip);
 
 });
