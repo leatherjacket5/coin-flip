@@ -33,10 +33,14 @@ flipButton.addEventListener('click', () => {
     if(flip === guess) {
         wins++;
         winsDisplay.textContent = 'Wins: ' + wins;
+        messageDisplay.textContent = 'You won!';
     } else {
         losses++;
         lossesDisplay.textContent = 'Losses: ' + losses;
+        messageDisplay.textContent = 'You suck!';
+
     }
+    
 
   
 });
