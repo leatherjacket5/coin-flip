@@ -7,8 +7,11 @@ const winsDisplay = document.getElementById('wins');
 const lossesDisplay = document.getElementById('losses');
 const messageDisplay = document.getElementById('message');
 
+let wins = 0;
+let losses = 0;
+
 flipButton.addEventListener('click', () => {
-    
+
     const randomNumber = Math.random();
     const flip = getHeadsOrTails(randomNumber);
 
@@ -20,7 +23,20 @@ flipButton.addEventListener('click', () => {
         coinImage.src = '../assets/tails-image.png';
     } 
 
-    console.log(flip);
+    let guess = '';
+    if(headsChoice.checked) {
+        guess = 'heads';
+    } else {
+        guess = 'tails';
+    }
 
+    if(flip === guess) {
+        wins++;
+        winsDisplay.textContent = 'Wins: ' + wins;
+    } else {
+        losses++;
+        lossesDisplay.textContent = 'Losses: ' + losses;
+    }
 
+  
 });
