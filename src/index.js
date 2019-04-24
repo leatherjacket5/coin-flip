@@ -9,9 +9,18 @@ const messageDisplay = document.getElementById('message');
 
 flipButton.addEventListener('click', () => {
     
-const randomNumber = Math.random();
-const flip = getHeadsOrTails(randomNumber);
+    const randomNumber = Math.random();
+    const flip = getHeadsOrTails(randomNumber);
 
-console.log(flip);
+// change image order
+    
+    if(flip === 'heads'){
+        coinImage.src = '../assets/heads-image.png';
+    } else {
+        coinImage.src = '../assets/tails-image.png';
+    } 
+
+    console.log(flip);
+
 
 });
