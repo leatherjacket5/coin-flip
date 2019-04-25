@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    background-image: url("../assets/dragon-background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+h1 {
+    color: red;
+}
+
+span {
+    margin: 0 20px;
+    color: #fff;;
+    font-weight: bolder;
+    -webkit-text-stroke: .3px red;
+}
