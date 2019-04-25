@@ -10,12 +10,16 @@ const messageDisplay = document.getElementById('message');
 
 // betting 
 
-const moneyMessage = document.getElementById('money-message');
+const moneyDisplay = document.getElementById('money-display');
 const moneyBet = document.getElementById('money-bet');
+
 
 
 let wins = 0;
 let losses = 0;
+
+let moneyAmount = 1000;
+
 
 flipButton.addEventListener('click', () => {
 
@@ -37,16 +41,24 @@ flipButton.addEventListener('click', () => {
         guess = 'tails';
     }
 
+    
+    
     if(flip === guess) {
         wins++;
         winsDisplay.textContent = 'Wins: ' + wins;
         messageDisplay.textContent = 'You won!';
+        moneyAmount += moneyBet.value;
+        moneyDisplay.textContent = 'You have ' + moneyAmount;
     } else {
         losses++;
         lossesDisplay.textContent = 'Losses: ' + losses;
         messageDisplay.textContent = 'You suck!';
+        moneyAmount -= moneyBet.value;
+        moneyDisplay.textContent = 'You have ' + moneyAmount;
 
     }
+
+    console.log(moneyBet.value);
     
     
   
