@@ -21,8 +21,11 @@ let losses = 0;
 let moneyAmount = 1000;
 
 
+
+
 flipButton.addEventListener('click', () => {
 
+    
     const randomNumber = Math.random();
     const flip = getHeadsOrTails(randomNumber);
 
@@ -41,8 +44,7 @@ flipButton.addEventListener('click', () => {
         guess = 'tails';
     }
 
-    
-    
+
     if(flip === guess) {
         wins++;
         winsDisplay.textContent = 'Wins: ' + wins;
